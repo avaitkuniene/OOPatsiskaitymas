@@ -1,0 +1,15 @@
+{
+    "name": "princeses/uzduotis2",
+    "autoload": {
+        "psr-4": {
+            "OOP\\Vigi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "avaitkuniene",
+            "email": "asta.vaitkuniene@gmail.com"
+        }
+    ],
+    "require": {}
+}
