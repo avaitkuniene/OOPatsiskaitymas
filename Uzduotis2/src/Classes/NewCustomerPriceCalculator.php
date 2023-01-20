@@ -7,11 +7,17 @@ class NewCustomerPriceCalculator implements TotalCalculatorInterface
     public function calculatePrice(array $tickets): float
     {
         $sum = 0;
+        $tickets = array_values($tickets);
 
-        foreach($tickets as $ticket)
+        foreach($tickets as $key => $ticket)
         {
-            $sum += $ticket->getPrice();
-            // Niekaip nesugalvojau kaip nuimti 20% tik nuo vieno bilieto :(
+            $price = $ticket->getPrice();
+
+            if ($key === 0){
+                $price *= 0.8;
+            }
+
+            $sum += $price;
         }
 
         return $sum;
